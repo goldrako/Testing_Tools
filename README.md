@@ -2,3 +2,5 @@
 
 - SonarQube/SonarLint
 - JaCoCo/EclEmma
+
+- etc. Jenkins pipeline 
