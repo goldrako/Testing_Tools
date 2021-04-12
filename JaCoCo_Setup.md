@@ -61,10 +61,12 @@ VM arguments: -javaagent:/Users/skcc03628/jacoco-0.8.7/lib/jacocoagent.jar=outpu
 ```bash
 ###  WAS VM Argumet 설정 스크립트
 
+(windows)
 -javaagent:c:\jacoco\lib\jacocoagent.jar=output=tcpserver
-
 -javaagent:c:\jacoco\lib\jacocoagent.jar=output=tcpserver,address=172.xx.xx.xx
 
+(Mac/Linux)
+-javaagent:/Users/skcc03628/jacoco-0.8.7/lib/jacocoagent.jar=output=tcpserver
 
 
 ###  CLI Command 참고 ####################고#########################################################
