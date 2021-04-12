@@ -1,0 +1,30 @@
+###  WAS VM Argumet  ###########################################################################
+
+(windows)
+-javaagent:c:\jacoco\lib\jacocoagent.jar=output=tcpserver
+-javaagent:c:\jacoco\lib\jacocoagent.jar=output=tcpserver,address=172.xx.xx.xx
+
+(Mac/Linux)
+-javaagent:/Users/skcc03628/jacoco-0.8.7/lib/jacocoagent.jar=output=tcpserver
+
+
+###  CLI Command  ##############################################################################
+
+java -jar c:\jacoco\lib\jacococli.jar dump --address 127.0.0.1 --port 6300 --destfile c:\jacoco\dump01.exec
+
+java -jar c:\jacoco\lib\jacococli.jar dump --address 127.0.0.1 --port 6300 --destfile c:\jacoco\dump02.exec
+
+
+java -jar c:\jacoco\lib\jacococli.jar merge c:\jacoco\dump01.exec c:\jacoco\dump02.exec --destfile c:\jacoco\merge.exec
+
+java -jar c:\jacoco\lib\jacococli.jar merge c:\jacoco\dump0*.exec --destfile c:\jacoco\merge.exec
+
+
+java -jar c:\jacoco\lib\jacococli.jar report c:\jacoco\merge.exec --encoding UTF-8 --html c:\jacoco\CoverageTestReport --name report --classfiles C:\sts_workspace\CoverageTest\build\classes --sourcefiles C:\sts_workspace\CoverageTest\src
+
+java -jar c:\jacoco\lib\jacococli.jar report c:\jacoco\merge.exec --encoding UTF-8 --xml c:\jacoco\CoverageTestReport.xml --name report --classfiles C:\sts_workspace\CoverageTest\build\classes --sourcefiles C:\sts_workspace\CoverageTest\src
+
+
+java -jar c:\jacoco\lib\jacococli.jar execinfo c:\jacoco\dump01.exec > c:\jacoco\dump01.txt
+
+java -jar c:\jacoco\lib\jacococli.jar execinfo c:\jacoco\dump02.exec > c:\jacoco\dump02.txt
