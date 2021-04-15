@@ -57,26 +57,18 @@ timestamps {
             }
  
             //stage('Unit Test') {
-            //   steps {
-            //     sh './mvnw test'
-            //   }
-            //   post {
-            //     always {
-            //        junit 'target/surefire-reports/*.xml'
-            //        step([ $class: 'JacocoPublisher' ])
-            //    }
-            //  }
+            //     container('maven') {
+            //         mavenBuild goal: 'test -f pom.xml', systemProperties:['maven.repo.local':"/root/.m2/${JOB_NAME}"]
+			//	 }
             //}
 
             stage('Static Code Analysis') {
-                //steps {
                     configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
                        // sh './mvnw sonar:sonar -s $MAVEN_SETTINGS'
                        container('maven') {
                            mavenBuild goal: 'clean compile sonar:sonar -DskipTests=true -f pom.xml -s $MAVEN_SETTINGS', systemProperties:['maven.repo.local':"/root/.m2/${JOB_NAME}"]
                        }
                     }
-                //}
             }
 
             //stage('BUILD') {
