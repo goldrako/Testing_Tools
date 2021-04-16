@@ -4,7 +4,7 @@
 
 ### 사전 작업
 
-* [POSTMAN 적용 가이드](POSTMAN_Usage.md) 에서 **사전처리** 항목에서 생성한 JSON 파일
+* [POSTMAN 적용 가이드](POSTMAN_Usage.md#%EC%82%AC%EC%A0%84-%EC%B2%98%EB%A6%AC) 에서 **사전처리** 항목에서 생성한 JSON 파일
   - export한 2개 json 파일을 아래 디렉토리 위치에 저장 
 
     <img src="postman_images/postman_export_json.png" width="300">
