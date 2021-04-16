@@ -23,6 +23,7 @@
 
     |<img src="postman_images/Global_NodeJS_Conf.png" width="600">
     |-
+
 #
 
 ### Jenkinsfile 에 API Test Stage 추가
