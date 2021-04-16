@@ -122,9 +122,10 @@ Jenkins Pipeline의 정의는 프로젝트의 소스 제어 저장소에 커밋 
 - **Credentials** 필드에 이전 단계에서 생성한 자격 증명을 선택합니다.
 - **Branch Specifier** 필드에 `*/main`으로 수정한 다음 **저장** 버튼을 클릭합니다.
 
+  > 최근 github 대표 브랜치 이름을 **master**에서  **main**으로 바뀌었습니다.
+
 | <img src="JenkinsPipelineImages/jenkins_pipeline_git_repositories.png" alt="Jenkins Pipeline script from SCM" width="600"/> |
 | ------------------------------------------------------------------------------------------------------------ |
-
 ### CI Pipeline Job 실행
 
 - 사이드 바에서 **Build Now**를 클릭하면 Job이 실행됩니다.

@@ -2,7 +2,7 @@
 
 ## POSTMAN 설치
 
-
+(생략)
 
 ## POSTMAN 실습
 
@@ -23,11 +23,12 @@
     - collection 이름 : `Petstore_Collection`
     - 하위폴더 생성 : `user`
 
+#
 ### POST 실습
 
-- collection (Swagger Petsotre ) > user > post ( Create user) 복사하여 Petstore_Collection > user 폴더에 붙여넣기
+- `collection (Swagger Petsotre )` > `user` > `post (Create user)` 복사하여 Petstore_Collection > `user` 폴더에 붙여넣기
 
-- body에 참고 자료를 이용하여 작성하기
+- `body`에 참고 자료를 이용하여 작성하기
 
 **post body 내용**
 
@@ -57,8 +58,8 @@
     |-
 
 
-*  POSTMAN Variable 범위(Scope)
- `Global > Collection > Environment > Local > Data`
+*  POSTMAN Variable 범위(Scope) - _교육교재 참고_
+ `Global` > `Collection` > `Environment` > `Local` > `Data`
 
 - variable 설정
     - 사전 설정 예 
@@ -72,18 +73,28 @@
             - `:pm.globals.set("variable_key", "variable_value");`
 
 * Tests Script 작성
-    - 작성 예 : `tests["reponse code is 200"] = responseCode.code === 200`
+    - 작성 예 : 
+    ```
+    tests["reponse code is 200"] = responseCode.code === 200
+    
+    (또는)
+    
+    pm.test("response is ok", () => { 
+        pm.response.to.have.status(200) 
+    })
+    ```
+
 
     |<img src="postman_images/post_user_test_script.png" width="600"/>
     |-
 
 
-* Send 실행
+* [**Send**] 실행하여 결과보기
 
     |<img src="postman_images/send_user_post_result.png" width="600"/>
     |-
 
-
+#
 ### PUT 실습
 
 * PUT 방식 호출과 파라메터 처리
@@ -94,19 +105,28 @@
 <br>
 
 * PUT Method 생성
-    - collection (Swagger Petsotre ) > user > {username} > put ( Update user) 복사하여 Petstore_Collection > user 폴더에 붙여넣기
+    - `collection (Swagger Petsotre)` > `user` > `{username}` > `put (Update user)` 복사하여 Petstore_Collection > `user` 폴더에 붙여넣기
 
     |<img src="postman_images/put_user.png" width="600"/>
     |-
 
-* body 수정 후 [Send]
-
+* **POST에서 사용한** `body` 수정 후 [Send]
+    - 예 : email, phone 수정함 ➞ `"code" : 200` 확인
 
     |<img src="postman_images/put_user_body.png" width="600"/>
     |-
 
+#
+### GET 실습(PUT 결과 보기)
 
-* PUT 결과 보기 (get Method 호출)
+* GET Method 생성
+    - `collection (Swagger Petsotre)` > `user` > `{username}` > `get (Get User by User name)` 복사하여 Petstore_Collection > `user` 폴더에 붙여넣기
+
+        |  KEY    |  VALUE    |
+        | :----: | :----: |
+        | username     | {**POST에서 사용한** username}     |
+
+* [**Send**] 실행하여 결과보기
 
     |<img src="postman_images/get_user_update.png" width="600"/>
     |-
@@ -201,7 +221,7 @@
 #### newman run
 
 ```bash
-❯ newman run Petstore_Collection.postman_collection.json 
+❯ newman run Petstore_Collection.postman_collection.json -e Local.postman_environment.json 
 newman
 
 Petstore_Collection
