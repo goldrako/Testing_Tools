@@ -169,7 +169,7 @@
 
    | <img src="postman_images/collection_export.png" width="300"/> |
    |-
-   | <img src="postman_images/environment_export.png" width="500"/> | 
+   | <img src="postman_images/Environment_export.png" width="500"/> | 
    
 
 
