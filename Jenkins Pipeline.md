@@ -88,7 +88,7 @@ Jenkins Pipeline의 정의는 프로젝트의 소스 제어 저장소에 커밋 
 
 다음을 수행하여 `Jenkinsfile` 파일을 작성하고 GitHub에 Push 합니다.
 
-- `spring-boot-hello-world` Workspace에서 `Jenkinsfile` 파일을 생성하고 아래 내용을 붙여 넣습니다.
+- `hello-world` Workspace에서 `Jenkinsfile` 파일을 생성하고 아래 내용을 붙여 넣습니다.
 
   ```groovy
   pipeline {
@@ -205,13 +205,13 @@ Finished: SUCCESS
 ```
 </details><br>
 
-> './mvnw: Permission denied' 오류가 발생하면 `spring-boot-hello-world` Workspace로 이동하여 `sudo chmod +x mvnw` 명령을 수행하고 Git Push 합니다.
+> Linux 게열에서 './mvnw: Permission denied' 오류가 발생하면 `hello-world` Workspace로 이동하여 `sudo chmod +x mvnw` 명령을 수행하고 Git Push 합니다.
 
 ## CI Pipeline에 Unit Test 추가
 
 ### Unit Test 코드 작성
 
-|<img src="JenkinsPipelineImages/spring-boot-starter-test.png" alt="Spring Boot Starter Test" width="600"/>
+|<img src="JenkinsPipelineImages/spring-boot-starter-test.png" alt="Spring Boot Starter Test"/>
 |-
 
 > pom.xml에 [Spring Boot Starter Test](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test) dependency를 추가하면 Java 기반 애플리케이션 Unit Test에 필요한 [JUnit](https://junit.org/junit5/docs/current/user-guide/), [Hamcrest](http://hamcrest.org/JavaHamcrest/tutorial) 및 [Mockito](https://site.mockito.org/) 의존성 라이브러리가 설치됩니다.

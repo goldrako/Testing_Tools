@@ -1,9 +1,0 @@
-stage('BUILD') {
-                container('maven') {
-                    mavenBuild goal: 'clean package sonar:sonar -DskipTests=true -Dsonar.login=647d0d0446a639a3b2e03587c4be8d3d4c34ae5f \
-                -Dsonar.host.url=http://xxx.xxx.xxx.xxxx:9000 \
-                -Dsonar.projectKey=OffRev -Dsonar.projectName=OffRev \
-                -Dsonar.projectVersion=Jenkins_maven_${BUILD_NUMBER} -f awesome-account-service/pom.xml', systemProperties:['maven.repo.local':"/root/.m2/${JOB_NAME}"]
-                }
-            }
-
