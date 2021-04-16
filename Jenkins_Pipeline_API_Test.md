@@ -20,6 +20,7 @@
     - `Name`: `Nodejs-15.14.0-Newman`  ← _단순히 Jenkins Plugin 최상위 버전이름로로 했음_
     - `Global npm package to install` : `newman`
 
+
     |<img src="postman_images/Global_NodeJS_Conf.png" width="600">
     |-
 #
