@@ -14,9 +14,9 @@
 #
 ### Jenkins 플러그인 설치
 
-  - jenkins > jenkins 관리 > 플러그인 관리 > **`nodejs`** plugin 설치
+* jenkins > jenkins 관리 > 플러그인 관리 > **`nodejs`** plugin 설치
 <br>
-  - Jenkins > jenkins 관리 > 글로벌 도구 구성 관리(Global Tool Configuration) > **`nodejs`** 환경 구성
+* Jenkins > jenkins 관리 > 글로벌 도구 구성 관리(Global Tool Configuration) > **`nodejs`** 환경 구성
     - `Name`: `Nodejs-15.14.0-Newman`  ← 단순히 Jenkins Plugin 최상위 버전이름로로 했음
     - `Global npm package to install` : `newman`
 
