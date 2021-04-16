@@ -113,7 +113,7 @@
 
 
 
-## Jenkins - POSTMAN - NewMan : API 테스트 자동화하기 
+## Jenkins - POSTMAN - Newman : API 테스트 자동화하기 
 
 *  Newman은 POSTMAN의 Collection을 커맨드라인(CLI)으로 실행하고 리포트를 생성하는 툴이다.
 
@@ -165,11 +165,12 @@
 
 ##### 사전 처리
 
-* POSTMAN `Collection`과 `Environment`을 json파일로 Export
+* POSTMAN `Collection`과 `Environment`을 json파일로 **Export**
 
    | <img src="postman_images/collection_export.png" width="300"/> |
+   |-
    | <img src="postman_images/environment_export.png" width="500"/> | 
-   |-----|
+   
 
 
 #### newman 사용법
@@ -199,7 +200,7 @@
 
 #### newman run
 
-```
+```bash
 ❯ newman run Petstore_Collection.postman_collection.json 
 newman
 
@@ -213,49 +214,43 @@ Petstore_Collection
 
 ↳ Updated user
   PUT {{baseUrl}}/user/esse culp [errored]
-     getaddrinfo ENOTFOUND {{baseurl}}
+     getaddrinfo ENOTFO❯ newman run Petstore_Collection.postman_collection.json -e Local.postman_environment.json 
+newman
+
+Petstore_Collection
+
+❏ user
+↳ Create user
+  POST https://petstore.swagger.io/v2/user [200 OK, 378B, 1132ms]
+  ✓  reponse code is 200
+
+↳ Updated user
+  PUT https://petstore.swagger.io/v2/user/esse culp [200 OK, 378B, 239ms]
 
 ↳ Get user by user name
-  GET {{baseUrl}}/user/bumseaha [errored]
-     getaddrinfo ENOTFOUND {{baseurl}}
+  GET https://petstore.swagger.io/v2/user/bumseaha [404 Not Found, 385B, 220ms]
 
-┌─────────────────────────┬──────────┬──────────┐
-│                         │ executed │   failed │
-├─────────────────────────┼──────────┼──────────┤
-│              iterations │        1 │        0 │
-├─────────────────────────┼──────────┼──────────┤
-│                requests │        3 │        3 │
-├─────────────────────────┼──────────┼──────────┤
-│            test-scripts │        1 │        0 │
-├─────────────────────────┼──────────┼──────────┤
-│      prerequest-scripts │        0 │        0 │
-├─────────────────────────┼──────────┼──────────┤
-│              assertions │        1 │        1 │
-├─────────────────────────┴──────────┴──────────┤
-│ total run duration: 106ms                     │
-├───────────────────────────────────────────────┤
-│ total data received: 0B (approx)              │
-└───────────────────────────────────────────────┘
-
-  #  failure                                 detail                                                                                                                                                        
-                                                                                                                                                                                                           
- 1.  Error                                   getaddrinfo ENOTFOUND {{baseurl}}                                                                                                                             
-                                             at request                                                                                                                                                    
-                                             inside "user / Create user"                                                                                                                                   
-                                                                                                                                                                                                           
- 2.  AssertionError                          reponse code is 200                                                                                                                                           
-                                             expected false to be truthy                                                                                                                                   
-                                             at assertion:0 in test-script                                                                                                                                 
-                                             inside "user / Create user"                                                                                                                                   
-                                                                                                                                                                                                           
- 3.  Error                                   getaddrinfo ENOTFOUND {{baseurl}}                                                                                                                             
-                                             at request                                                                                                                                                    
-                                             inside "user / Updated user"                                                                                                                                  
-                                                                                                                                                                                                           
- 4.  Error                                   getaddrinfo ENOTFOUND {{baseurl}}                                                                                                                             
-                                             at request                                                                                                                                                    
-                                             inside "user / Get user by user name"  
+┌─────────────────────────┬─────────────────────┬─────────────────────┐
+│                         │            executed │              failed │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              iterations │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│                requests │                   3 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│            test-scripts │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│      prerequest-scripts │                   0 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              assertions │                   1 │                   0 │
+├─────────────────────────┴─────────────────────┴─────────────────────┤
+│ total run duration: 1664ms                                          │
+├─────────────────────────────────────────────────────────────────────┤
+│ total data received: 156B (approx)                                  │
+├─────────────────────────────────────────────────────────────────────┤
+│ average response time: 530ms [min: 220ms, max: 1132ms, s.d.: 425ms] │
+└─────────────────────────────────────────────────────────────────────┘ 
 ```
+
 
 
 
