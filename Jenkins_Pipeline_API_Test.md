@@ -21,8 +21,8 @@
     - `Global npm package to install` : `newman`
 
 
-    |<img src="postman_images/Global_NodeJS_Conf.png" width="600">
-    |-
+| <img src="postman_images/Global_NodeJS_Conf.png" width="600"/> |
+| -------------------------------------------------------------------------- |
 
 #
 
