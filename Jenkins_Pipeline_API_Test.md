@@ -16,7 +16,7 @@
 
 * jenkins > jenkins 관리 > 플러그인 관리 > **`nodejs`** plugin 설치
 * Jenkins > jenkins 관리 > 글로벌 도구 구성 관리(Global Tool Configuration) > **`nodejs`** 환경 구성
-    - `Name`: `Nodejs-15.14.0-Newman`  ← 단순히 Jenkins Plugin 최상위 버전이름로로 했음
+    - `Name`: `Nodejs-15.14.0-Newman`  ← 단순히 Jenkins Plugin 최상위 버전이름으로 했음
     - `Global npm package to install` : `newman`
 
 
@@ -105,7 +105,7 @@ pipeline {
 | -------------------------------------------------------------------------- |
 
 
-- **Build History**에서 **#일련번호**을 선택한 다음, **Console Output**을 선택하면 빌드 로그를 확인할 수 있습니다.
+- **Build History**에서 **#일련번호**을 선택한 다음, **Console Output**을 선택하면 빌드 로그에서 `POSTMAN Collection 실행 결과`를 확인할 수 있습니다.
 
 ```groovy
 ...
