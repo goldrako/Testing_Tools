@@ -177,3 +177,4 @@ Finished: SUCCESS
 > 참고 사이트
 
 [NodeJS | Jenkins plugin](https://plugins.jenkins.io/nodejs/)
+[Integrating with Jenkins](https://learning.postman.com/docs/running-collections/using-newman-cli/integration-with-jenkins/)
