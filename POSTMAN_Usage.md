@@ -282,5 +282,8 @@ Petstore_Collection
 > 참고 사이트
 
 [스크립트 기반의 고급기능 1](https://learning.POSTMAN.com/docs/writing-scripts/script-references/POSTMAN-sandbox-api-reference/)
+
 [스크립트 기반의 고급기능 2](https://learning.POSTMAN.com/docs/writing-scripts/script-references/test-examples/)
+
 [Running collections on the command line with Newman](https://learning.postman.com/docs/running-collections/using-newman-cli/command-line-integration-with-newman/)
+
