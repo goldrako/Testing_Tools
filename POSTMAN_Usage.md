@@ -149,11 +149,13 @@
 <br>
 * npm 명령어 이용하여 Newman 설치
 
+    - npm 설치
     ```bash
     $ npm install newman --global
     $ npm install newman-reporter-html --global
     ```
-
+    - newman 
+    
     ```bash
     ❯ sudo npm install newman --global
     Password:
