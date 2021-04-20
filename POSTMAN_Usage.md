@@ -152,7 +152,7 @@
     ```bash
     $ npm install newman --global
     $ npm install newman-reporter-html --global
-    ````
+    ```
 
     ```bash
     ❯ sudo npm install newman --global
