@@ -62,21 +62,23 @@ timestamps {
 			//	 }
             //}
 
-            stage('Static Code Analysis') {
-                    configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
-                       // sh './mvnw sonar:sonar -s $MAVEN_SETTINGS'
-                       container('maven') {
-                           mavenBuild goal: 'clean compile sonar:sonar -DskipTests=true -f pom.xml -s $MAVEN_SETTINGS', systemProperties:['maven.repo.local':"/root/.m2/${JOB_NAME}"]
-                       }
-                    }
-            }
 
             //stage('BUILD') {
             //    container('maven') {
             //        mavenBuild goal: 'clean package -DskipTests=true -f pom.xml', systemProperties:['maven.repo.local':"/root/.m2/${JOB_NAME}"]
             //    }
             //}
-    
+
+            stage('Static Code Analysis') {
+                    configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
+                       // sh './mvnw sonar:sonar -s $MAVEN_SETTINGS'
+                       container('maven') {
+                           mavenBuild goal: 'clean package sonar:sonar -DskipTests=true -f pom.xml -s $MAVEN_SETTINGS', systemProperties:['maven.repo.local':"/root/.m2/${JOB_NAME}"]
+                       }
+                    }
+            }
+
+
             //stage('BUILD DOCKER IMAGE') {
             //    container('docker') {
             //        dockerCmd.build tag: "${HARBOR_REGISTRY}/${DOCKER_IMAGE}:${DOCKER_VERSION}"
