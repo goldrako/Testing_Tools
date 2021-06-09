@@ -45,7 +45,7 @@ SonarQube Server Download
 - https://www.sonarqube.org/downloads/
 
 설치(Unzip)  
-- C:\sonarqub준
+- C:\sonarqube
 
 시스템 환경변수 설정
 - SONAR_HOME=C:\sonarqube  
