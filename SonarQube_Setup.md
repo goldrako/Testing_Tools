@@ -183,15 +183,14 @@ sonar.sources=src
 #sonar.sources=.
 
 # path to class directories (optional)
-sonar.java.binaries=build
-#sonar.java.binaries=target
+sonar.java.binaries=target
 #sonar.java.binaries=.
 
 # The value of the property must be the key of the language 
-sonar.language=java
+#sonar.language=java
 
 # .svn directory skip (optional)
-sonar.scm.disabled=True
+#sonar.scm.disabled=True
 
 # SonarQube Integration
 #sonar.coverage.jacoco.xmlReportPaths=C:/jacoco/CoverageTestReport.xml
