@@ -145,6 +145,7 @@ Sonar-Scanner Download
 
 #### sonar-scanner.properties 수정
 - C:\sonar-scanner\conf\sonar-scanner.properties
+  (homebrew 설치 했을 때 : /usr/local/Cellar/sonar-scanner) 
 - 기본 설정 유지
 - sonar.host.url
 - sonar.sourceEncoding
