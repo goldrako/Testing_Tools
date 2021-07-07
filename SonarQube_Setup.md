@@ -39,7 +39,7 @@ A SonarQube instance comprises three components:
 ![pricing Table](images/Pricing.png)
 
 > https://www.sonarsource.com/plans-and-pricing/
-LOC (Lines of Code)는 어떻게 계산됩니까?
+> LOC (Lines of Code)는 어떻게 계산됩니까? 
 LOC는 분석 된 각 프로젝트의 LOC를 합산하여 계산됩니다. 프로젝트의 LOC 개수는 프로젝트에서 가장 큰 지점의 LOC 개수입니다.
 
 ## 설치 과정 (윈도우 환경)
