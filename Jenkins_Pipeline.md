@@ -749,17 +749,17 @@ Jenkins UI를 통해 구성된 Maven settings.xml을 Jenkins Pipeline에서 사�
 - `AMF용` `Jenkinsfile` 파일은 groovy script 형태로 문법이 다릅니다.
   `BUILD` stage 앞에 아래 내용을 붙여 넣습니다.
 
-  ```groovy
-           stage('Static Code Analysis') {
-                dir('APP_SRC_WORKSPACE') {
-                    configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
-                       container('maven') {
-                           mavenBuild goal: 'clean compile sonar:sonar -DskipTests=true -f pom.xml -s $MAVEN_SETTINGS', systemProperties:['maven.repo.local':"/root/.m2/${JOB_NAME}"]
-                       }
-                    }
-                }
-            }
-  ```
+```groovy
+  stage('Static Code Analysis') {
+       dir('APP_SRC_WORKSPACE') {
+           configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
+              container('maven') {
+                  mavenBuild goal: 'clean compile sonar:sonar -DskipTests=true -f pom.xml -s $MAVEN_SETTINGS', systemProperties:['maven.repo.local':"/root/.m2/${JOB_NAME}"]
+              }
+           }
+       }
+  }
+```
 
 
 - 아래 명령을 수행하여 GitHub에 Push 합니다.
