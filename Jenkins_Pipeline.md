@@ -750,7 +750,7 @@ Jenkins UI를 통해 구성된 Maven settings.xml을 Jenkins Pipeline에서 사�
   `BUILD` stage 앞에 아래 내용을 붙여 넣습니다.
 
   ```groovy
-            stage('Static Code Analysis') {
+           stage('Static Code Analysis') {
                 dir('APP_SRC_WORKSPACE') {
                     configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
                        container('maven') {
