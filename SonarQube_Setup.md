@@ -179,17 +179,19 @@ sonar.sourceEncoding=UTF-8
 ```bash
 # required metadata
 sonar.projectKey=[프로젝트명]
-sonar.projectName=[프로젝트명]]
+sonar.projectName=[프로젝트명]
 sonar.projectVersion=[Scan History 관리용 버전]
 #sonar.projectVersion=20190303
 
 # path to source directories (required)
 #sonar.modules=cnaps-core,oms-core,oms-common-shared,oms-criteria,oms-request,oms-servicedesk,oms-sla,oms-trouble
 sonar.sources=src
+# 특정 소스 폴더를 지정할 필요가 없을 때
 #sonar.sources=.
 
 # path to class directories (optional)
 sonar.java.binaries=target
+# 빌드된 디렉토리가 없을 때
 #sonar.java.binaries=.
 
 # The value of the property must be the key of the language 
