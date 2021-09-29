@@ -139,7 +139,7 @@ ubuntu    -    nproc    4096
 ### 설치 절차
 
 Sonar-Scanner Download
-- https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner
+- https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
 
 설치(Unzip)  
 - C:\sonar-scanner
